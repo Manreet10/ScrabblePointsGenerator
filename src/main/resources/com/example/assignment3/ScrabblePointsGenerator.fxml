@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="688.0" prefWidth="600.0" style="-fx-background-color: #faebd7; -fx-border-width: 12; -fx-border-color: #ab7f42;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment3.ScrabblePointsGeneratorController">
+   <children>
+      <Button id="submit button" fx:id="submitword" layoutX="229.0" layoutY="414.0" mnemonicParsing="false" onAction="#initialize" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: #f4a555; -fx-font-size: 12;" text="SUBMIT WORD" textFill="#ac3333">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Button>
+      <ListView fx:id="PreviousWords" layoutX="32.0" layoutY="504.0" prefHeight="168.0" prefWidth="542.0" style="-fx-background-color: #faebd7; -fx-border-color: #ab7f42; -fx-border-width: 1;" />
+      <TextField fx:id="InputTextField" layoutX="128.0" layoutY="111.0" prefHeight="26.0" prefWidth="330.0" />
+      <Label fx:id="Score" layoutX="516.0" layoutY="62.0" text="Label" />
+      <Text layoutX="475.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score" />
+      <Text fill="#e11010" layoutX="249.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Word Entered">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#cc1717" layoutX="242.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Previous Words">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Text>
+      <GridPane alignment="TOP_CENTER" layoutX="32.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="541.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="AlphaA" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-border-color: #3e4d36; -fx-font-size: 18; -fx-background-color: #d87e7e;" text="A" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Times New Roman Bold" size="27.0" />
+               </font>
+            </Button>
+            <Button fx:id="AlphaQ" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="Q" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaP" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="P" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaO" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="O" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaN" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="N" GridPane.columnIndex="6" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaM" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="M" GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaL" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="L" GridPane.columnIndex="4" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaK" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="K" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaJ" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-font-size: 18; -fx-border-color: #3e4d36;" text="J" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaI" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-font-size: 18; -fx-border-color: #3e4d36;" text="I" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaG" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="G" GridPane.columnIndex="6" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaF" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-font-size: 18; -fx-border-color: #3e4d36;" text="F" GridPane.columnIndex="5" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaE" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-font-size: 18; -fx-border-color: #3e4d36;" text="E" GridPane.columnIndex="4" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaD" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-font-size: 18; -fx-border-color: #3e4d36;" text="D" GridPane.columnIndex="3" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaC" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-font-size: 18; -fx-border-color: #3e4d36;" text="C" GridPane.columnIndex="2" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaB" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-font-size: 18; -fx-border-color: #3e4d36;" text="B" GridPane.columnIndex="1" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaH" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-font-size: 18; -fx-border-color: #3e4d36;" text="H" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaZ" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="Z" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaY" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="Y" GridPane.columnIndex="4" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaX" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="X" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaW" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="W" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaU" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-font-size: 18; -fx-border-color: #3e4d36;" text="U" GridPane.columnIndex="6" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaT" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-font-size: 18; -fx-border-color: #3e4d36;" text="T" GridPane.columnIndex="5" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaS" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="S" GridPane.columnIndex="4" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaR" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="R" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Button fx:id="AlphaV" minWidth="38.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" style="-fx-background-color: #d87e7e; -fx-border-color: #3e4d36; -fx-font-size: 18;" text="V" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+            <Label prefHeight="18.0" prefWidth="41.0" text="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="44.0" layoutY="30.0" prefHeight="18.0" prefWidth="41.0" text="3" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="3" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="3" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="1" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="3" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="1" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="5" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="8" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="1" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="2" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="4" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="1" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="2" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="4" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="1" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="1" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="1" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="1" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="10" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="10" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="4" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="8" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="41.0" text="4" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsA" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="9" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+            </Label>
+            <Label fx:id="WordsB" layoutX="8.0" layoutY="49.0" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="2" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsC" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="2" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsO" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="8" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsN" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="6" GridPane.columnIndex="6" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsM" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="2" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsL" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="4" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsK" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="1" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsJ" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="1" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsI" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="8" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsH" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsG" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="3" GridPane.columnIndex="6" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsF" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="2" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsE" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="12" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsD" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="4" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsU" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="4" GridPane.columnIndex="6" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsT" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="6" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsS" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="4" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsR" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="6" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsQ" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="1" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsP" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="2" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsZ" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="1" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsY" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="2" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsX" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="1" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsW" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="2" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="WordsV" prefHeight="18.0" prefWidth="54.0" style="-fx-background-color: #ffffff;" text="2" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <padding>
+                  <Insets left="22.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <Text fill="#bd2424" layoutX="153.0" layoutY="49.0" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" text="SCRABBLE POINT GENERATOR">
+         <font>
+            <Font name="Sitka Text" size="22.0" />
+         </font>
+      </Text>
+      <Label fx:id="invalidLabel" layoutX="231.0" layoutY="50.0" prefHeight="18.0" prefWidth="137.0" text=" ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
